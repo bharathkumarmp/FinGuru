@@ -1,0 +1,19 @@
+FinGuru KYC Guidelines
+
+Know Your Customer:
+KYC processes are used to establish and verify customer identity.
+
+Personal Information:
+Sensitive personal information should only be collected and processed for an appropriate and permitted purpose.
+
+Data Minimization:
+Only information necessary for the intended financial service or analysis should be used.
+
+Consent:
+Where consent is required, customer data should not be used for a purpose outside the granted consent.
+
+Privacy:
+Sensitive information such as account numbers, phone numbers, email addresses, and identity information should be protected from unnecessary exposure.
+
+Security:
+Customer information should be protected through appropriate access controls, masking, and secure processing.

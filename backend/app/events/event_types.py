@@ -1,0 +1,32 @@
+from enum import Enum
+
+
+class EventType(str, Enum):
+    """
+    FinGuru banking and security event types.
+    """
+
+    SALARY_CREDITED = "SALARY_CREDITED"
+
+    EMI_DUE = "EMI_DUE"
+
+    EMI_MISSED = "EMI_MISSED"
+
+    LARGE_TRANSACTION = "LARGE_TRANSACTION"
+
+    NEW_DEVICE = "NEW_DEVICE"
+
+    NEW_BENEFICIARY = "NEW_BENEFICIARY"
+
+    SPENDING_SPIKE = "SPENDING_SPIKE"
+
+    BALANCE_DROP = "BALANCE_DROP"
+
+    # Additional useful security events
+    SUSPICIOUS_TRANSACTION = "SUSPICIOUS_TRANSACTION"
+
+    IDENTITY_RISK = "IDENTITY_RISK"
+
+    FRAUD_DETECTED = "FRAUD_DETECTED"
+
+    SECURITY_THREAT = "SECURITY_THREAT"

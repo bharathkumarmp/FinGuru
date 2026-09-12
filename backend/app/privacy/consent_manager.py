@@ -1,105 +1,149 @@
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional
+
+from sqlalchemy.orm import Session
+
+from app.models.consent import Consent
 
 
-# ============================================================
-# CONSENT MANAGER
-# ============================================================
-
-class ConsentManager:
+def grant_consent(
+    db: Session,
+    customer_id: int,
+    purpose: str,
+) -> Dict[str, Any]:
     """
-    Simple in-memory consent manager for the prototype.
+    Grant consent for a specific purpose.
 
-    Production implementation should persist consent
-    records in the database.
+    If consent already exists for the customer and purpose,
+    update it instead of creating a duplicate record.
     """
 
-    def __init__(self):
-        self.consents: Dict[int, Dict[str, Any]] = {}
+    consent = (
+        db.query(Consent)
+        .filter(
+            Consent.customer_id == customer_id,
+            Consent.purpose == purpose,
+        )
+        .first()
+    )
 
-    # ========================================================
-    # GRANT CONSENT
-    # ========================================================
+    if consent:
+        consent.granted = True
+        consent.updated_at = datetime.utcnow()
+    else:
+        consent = Consent(
+            customer_id=customer_id,
+            purpose=purpose,
+            granted=True,
+        )
+        db.add(consent)
 
-    def grant_consent(
-        self,
-        customer_id: int,
-        purposes: list[str],
-    ) -> Dict[str, Any]:
+    db.commit()
+    db.refresh(consent)
 
-        self.consents[customer_id] = {
+    return {
+        "id": consent.id,
+        "customer_id": consent.customer_id,
+        "purpose": consent.purpose,
+        "granted": consent.granted,
+        "created_at": consent.created_at,
+        "updated_at": consent.updated_at,
+    }
+
+
+def revoke_consent(
+    db: Session,
+    customer_id: int,
+    purpose: str,
+) -> Dict[str, Any]:
+    """
+    Revoke consent for a specific purpose.
+    """
+
+    consent = (
+        db.query(Consent)
+        .filter(
+            Consent.customer_id == customer_id,
+            Consent.purpose == purpose,
+        )
+        .first()
+    )
+
+    if not consent:
+        return {
             "customer_id": customer_id,
-            "granted": True,
-            "purposes": purposes,
-            "granted_at": datetime.utcnow().isoformat(),
-        }
-
-        return self.consents[customer_id]
-
-    # ========================================================
-    # REVOKE CONSENT
-    # ========================================================
-
-    def revoke_consent(
-        self,
-        customer_id: int,
-    ) -> Dict[str, Any]:
-
-        self.consents[customer_id] = {
-            "customer_id": customer_id,
+            "purpose": purpose,
             "granted": False,
-            "purposes": [],
-            "revoked_at": datetime.utcnow().isoformat(),
+            "message": "No consent record found. Consent remains unavailable.",
         }
 
-        return self.consents[customer_id]
+    consent.granted = False
+    consent.updated_at = datetime.utcnow()
 
-    # ========================================================
-    # CHECK CONSENT
-    # ========================================================
+    db.commit()
+    db.refresh(consent)
 
-    def has_consent(
-        self,
-        customer_id: int,
-        purpose: str,
-    ) -> bool:
+    return {
+        "id": consent.id,
+        "customer_id": consent.customer_id,
+        "purpose": consent.purpose,
+        "granted": consent.granted,
+        "created_at": consent.created_at,
+        "updated_at": consent.updated_at,
+    }
 
-        consent = self.consents.get(
-            customer_id
+
+def has_consent(
+    db: Session,
+    customer_id: int,
+    purpose: str,
+) -> bool:
+    """
+    Check whether a customer has currently granted
+    consent for a specific purpose.
+    """
+
+    consent = (
+        db.query(Consent)
+        .filter(
+            Consent.customer_id == customer_id,
+            Consent.purpose == purpose,
+            Consent.granted.is_(True),
         )
+        .first()
+    )
 
-        if not consent:
-            return False
-
-        if not consent.get("granted"):
-            return False
-
-        return purpose in consent.get(
-            "purposes",
-            [],
-        )
-
-    # ========================================================
-    # GET CONSENT
-    # ========================================================
-
-    def get_consent(
-        self,
-        customer_id: int,
-    ) -> Dict[str, Any]:
-
-        return self.consents.get(
-            customer_id,
-            {
-                "customer_id": customer_id,
-                "granted": False,
-                "purposes": [],
-            },
-        )
+    return consent is not None
 
 
-# ============================================================
-# GLOBAL CONSENT MANAGER
-# ============================================================
+def get_consent(
+    db: Session,
+    customer_id: int,
+    purpose: Optional[str] = None,
+) -> List[Dict[str, Any]]:
+    """
+    Retrieve consent records for a customer.
 
-consent_manager = ConsentManager()
+    If purpose is provided, return only that purpose.
+    """
+
+    query = db.query(Consent).filter(
+        Consent.customer_id == customer_id
+    )
+
+    if purpose:
+        query = query.filter(Consent.purpose == purpose)
+
+    records = query.order_by(Consent.updated_at.desc()).all()
+
+    return [
+        {
+            "id": consent.id,
+            "customer_id": consent.customer_id,
+            "purpose": consent.purpose,
+            "granted": consent.granted,
+            "created_at": consent.created_at,
+            "updated_at": consent.updated_at,
+        }
+        for consent in records
+    ]

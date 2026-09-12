@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+python-dotenv
+numpy
+scikit-learn
+chromadb
+sentence-transformers
+openai

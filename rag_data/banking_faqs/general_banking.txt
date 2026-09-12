@@ -1,0 +1,22 @@
+FinGuru Banking FAQ
+
+Account Balance:
+A customer can review their available account balance and recent transactions through the banking application.
+
+Transaction Review:
+Customers should review unfamiliar transactions promptly and report suspicious activity through the bank's official support or security channel.
+
+Digital Banking Security:
+Customers should never share passwords, PINs, OTPs, CVV numbers, or authentication codes with another person.
+
+Beneficiary Changes:
+Adding a new beneficiary can create additional transaction risk. Customers should verify beneficiary details before transferring funds.
+
+Suspicious Transactions:
+If a transaction appears suspicious, the customer should contact the bank and follow the bank's transaction-security process.
+
+Financial Advice:
+Financial recommendations should consider the customer's income, spending, savings, debt burden, financial health, financial stress, and affordability.
+
+Responsible Recommendations:
+A financial product should not be recommended merely because a customer may qualify for it. Suitability and affordability should be considered first.

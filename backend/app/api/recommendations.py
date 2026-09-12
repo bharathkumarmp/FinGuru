@@ -11,6 +11,8 @@ from app.services.recommendation_engine import generate_recommendation
 
 from app.policy.policy_engine import policy_engine
 
+from app.privacy.consent_manager import has_consent
+
 
 router = APIRouter(
     prefix="/recommendations",
@@ -34,6 +36,8 @@ def get_customer_recommendation(
         Financial Health
                 ↓
         Financial Stress
+                ↓
+        Consent Check
                 ↓
         Recommendation Engine
                 ↓
@@ -153,7 +157,27 @@ def get_customer_recommendation(
     )
 
     # ========================================================
-    # 6. GENERATE RECOMMENDATION
+    # 6. CHECK DATABASE-BACKED CONSENT
+    # ========================================================
+    #
+    # Recommendations are considered financial advice.
+    #
+    # IMPORTANT:
+    # We no longer use:
+    #
+    #     consent_given=True
+    #
+    # Consent is now read from the Consent database.
+    #
+
+    consent_given = has_consent(
+        db=db,
+        customer_id=customer_id,
+        purpose="financial_advice",
+    )
+
+    # ========================================================
+    # 7. GENERATE RECOMMENDATION
     # ========================================================
 
     try:
@@ -191,7 +215,7 @@ def get_customer_recommendation(
         )
 
     # ========================================================
-    # 7. GET RECOMMENDATION SCORE
+    # 8. GET RECOMMENDATION SCORE
     # ========================================================
 
     recommendation_score = float(
@@ -202,14 +226,14 @@ def get_customer_recommendation(
     )
 
     # ========================================================
-    # 8. GET RECOMMENDATION CONFIDENCE
+    # 9. GET RECOMMENDATION CONFIDENCE
     # ========================================================
 
     # The current recommendation engine does not
     # explicitly produce a confidence model.
     #
     # Until the dedicated confidence model is added,
-    # we derive a bounded confidence value from the
+    # derive a bounded confidence value from the
     # recommendation score.
 
     confidence = max(
@@ -221,7 +245,7 @@ def get_customer_recommendation(
     )
 
     # ========================================================
-    # 9. POLICY ENGINE
+    # 10. POLICY ENGINE
     # ========================================================
 
     try:
@@ -232,7 +256,7 @@ def get_customer_recommendation(
             # Consent
             # ------------------------------------------------
 
-            consent_given=True,
+            consent_given=consent_given,
 
             # ------------------------------------------------
             # Purpose
@@ -293,6 +317,10 @@ def get_customer_recommendation(
                 "No compliance violation detected."
             ),
 
+            # ------------------------------------------------
+            # Critical Risk
+            # ------------------------------------------------
+
             critical=(
                 stress_score >= 80
                 or health_score < 35
@@ -309,7 +337,7 @@ def get_customer_recommendation(
         )
 
     # ========================================================
-    # 10. DETERMINE FINAL ACTION
+    # 11. DETERMINE FINAL ACTION
     # ========================================================
 
     original_action = recommendation.get(
@@ -324,19 +352,21 @@ def get_customer_recommendation(
 
     # Policy has authority over the final action.
     #
-    # ALLOW means the original recommendation can
-    # continue.
+    # ALLOW:
+    #     Original recommendation can continue.
     #
-    # Otherwise the policy action becomes the
-    # customer-facing action.
+    # Otherwise:
+    #     Policy action overrides recommendation.
+    #
 
     if policy_action == "ALLOW":
         final_action = original_action
+
     else:
         final_action = policy_action
 
     # ========================================================
-    # 11. RETURN COMPLETE RESPONSE
+    # 12. RETURN COMPLETE RESPONSE
     # ========================================================
 
     return {
@@ -376,5 +406,10 @@ def get_customer_recommendation(
             "financial_health": health_score,
 
             "financial_stress": stress_score,
+
+            "consent": {
+                "purpose": "financial_advice",
+                "granted": consent_given,
+            },
         },
     }

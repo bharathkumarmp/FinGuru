@@ -1,0 +1,22 @@
+FinGuru Personal Loan Guidelines
+
+Loan Suitability:
+A personal loan should be evaluated based on affordability, repayment capacity, existing obligations, income stability, and financial condition.
+
+EMI Affordability:
+Before taking a loan, a customer should assess the proposed EMI together with existing financial obligations.
+
+Negative Cash Flow:
+Customers with persistent negative monthly cash flow should not be encouraged to take additional borrowing without first addressing affordability and financial stability.
+
+Financial Stress:
+Elevated financial stress should be considered when evaluating additional debt.
+
+Repayment:
+Customers should understand the interest rate, tenure, EMI, total repayment amount, fees, and applicable terms before accepting a loan.
+
+Responsible Lending:
+Loan recommendations should prioritize customer suitability and affordability rather than maximizing product sales.
+
+Simulation:
+A loan simulation can estimate the proposed EMI and its impact on monthly cash flow and financial health. A simulation is not itself a loan approval.
