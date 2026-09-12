@@ -1,0 +1,34 @@
+[
+  {
+    "event_type": "SALARY_CREDITED",
+    "description": "Monthly salary credited"
+  },
+  {
+    "event_type": "EMI_DUE",
+    "description": "Loan EMI due"
+  },
+  {
+    "event_type": "EMI_MISSED",
+    "description": "Loan EMI missed"
+  },
+  {
+    "event_type": "LARGE_TRANSACTION",
+    "description": "Large transaction detected"
+  },
+  {
+    "event_type": "NEW_DEVICE",
+    "description": "New device detected"
+  },
+  {
+    "event_type": "NEW_BENEFICIARY",
+    "description": "New beneficiary added"
+  },
+  {
+    "event_type": "SPENDING_SPIKE",
+    "description": "Spending spike detected"
+  },
+  {
+    "event_type": "BALANCE_DROP",
+    "description": "Significant balance drop detected"
+  }
+]

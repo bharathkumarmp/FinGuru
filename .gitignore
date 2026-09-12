@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# ML generated files
+ml_models/
+vector_store/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Logs
+*.log

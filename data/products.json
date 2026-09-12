@@ -1,0 +1,42 @@
+[
+  {
+    "product_code": "PL001",
+    "name": "Personal Loan",
+    "product_type": "loan",
+    "description": "Flexible personal loan for eligible customers.",
+    "interest_rate": 11.5,
+    "min_amount": 50000,
+    "max_amount": 1000000,
+    "active": true
+  },
+  {
+    "product_code": "HL001",
+    "name": "Home Loan",
+    "product_type": "loan",
+    "description": "Home financing solution.",
+    "interest_rate": 8.5,
+    "min_amount": 500000,
+    "max_amount": 10000000,
+    "active": true
+  },
+  {
+    "product_code": "FD001",
+    "name": "Fixed Deposit",
+    "product_type": "investment",
+    "description": "Fixed deposit savings product.",
+    "interest_rate": 7.0,
+    "min_amount": 1000,
+    "max_amount": 10000000,
+    "active": true
+  },
+  {
+    "product_code": "RD001",
+    "name": "Recurring Deposit",
+    "product_type": "investment",
+    "description": "Monthly recurring savings product.",
+    "interest_rate": 6.5,
+    "min_amount": 500,
+    "max_amount": 1000000,
+    "active": true
+  }
+]

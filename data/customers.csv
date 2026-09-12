@@ -1,0 +1,101 @@
+id,customer_code,full_name,email,phone,date_of_birth,city,occupation,monthly_income
+1,FG00001,Arjun Sharma,arjun.sharma1@finguru.demo,9362950628,1984-03-24,Gandhinagar,Consultant,139940.33
+2,FG00002,Aditya Kumar,aditya.kumar2@finguru.demo,9131994523,1975-04-08,Vadodara,Student,90397.88
+3,FG00003,Aarav Singh,aarav.singh3@finguru.demo,9797808098,1996-04-15,Hyderabad,Accountant,55819.84
+4,FG00004,Aarav Mehta,aarav.mehta4@finguru.demo,9465341213,1987-03-07,Delhi,Teacher,133211.61
+5,FG00005,Aditya Joshi,aditya.joshi5@finguru.demo,9469319644,1986-01-24,Surat,Consultant,39991.04
+6,FG00006,Arjun Joshi,arjun.joshi6@finguru.demo,9414797776,1993-10-07,Gandhinagar,Software Engineer,37214.03
+7,FG00007,Karan Verma,karan.verma7@finguru.demo,9349957310,1976-07-09,Surat,Designer,177709.34
+8,FG00008,Rohan Gupta,rohan.gupta8@finguru.demo,9819595113,1987-12-22,Gandhinagar,Student,80066.96
+9,FG00009,Rohan Singh,rohan.singh9@finguru.demo,9275452091,1999-07-09,Vadodara,Doctor,138014.65
+10,FG00010,Ananya Sharma,ananya.sharma10@finguru.demo,9134467368,1990-07-09,Gandhinagar,Doctor,60502.45
+11,FG00011,Neha Gupta,neha.gupta11@finguru.demo,9636045484,1995-11-15,Mumbai,Accountant,57957.11
+12,FG00012,Rahul Shah,rahul.shah12@finguru.demo,9678722458,1986-12-19,Jaipur,Student,140473.29
+13,FG00013,Isha Gupta,isha.gupta13@finguru.demo,9248532577,2002-08-03,Ahmedabad,Teacher,58994.72
+14,FG00014,Rahul Mehta,rahul.mehta14@finguru.demo,9553290810,1974-07-13,Hyderabad,Government Employee,147772.3
+15,FG00015,Pooja Verma,pooja.verma15@finguru.demo,9112327652,1977-11-18,Bengaluru,Designer,175517.15
+16,FG00016,Arjun Verma,arjun.verma16@finguru.demo,9587182120,1970-12-24,Bengaluru,Consultant,92388.61
+17,FG00017,Rohan Singh,rohan.singh17@finguru.demo,9771410971,1989-11-17,Hyderabad,Doctor,166457.32
+18,FG00018,Rahul Gupta,rahul.gupta18@finguru.demo,9679153816,1970-10-11,Surat,Software Engineer,143189.17
+19,FG00019,Arjun Gupta,arjun.gupta19@finguru.demo,9992994062,1989-04-02,Pune,Student,161201.89
+20,FG00020,Aditya Patel,aditya.patel20@finguru.demo,9976198296,1974-09-25,Mumbai,Business Owner,138445.68
+21,FG00021,Meera Singh,meera.singh21@finguru.demo,9666585408,1997-04-18,Pune,Accountant,50594.68
+22,FG00022,Isha Gupta,isha.gupta22@finguru.demo,9655742829,1998-02-08,Pune,Teacher,92905.51
+23,FG00023,Ananya Sharma,ananya.sharma23@finguru.demo,9347083812,1984-01-03,Ahmedabad,Doctor,116187.85
+24,FG00024,Aditya Sharma,aditya.sharma24@finguru.demo,9176082500,2002-04-09,Surat,Doctor,158243.49
+25,FG00025,Riya Mehta,riya.mehta25@finguru.demo,9713152854,2000-04-26,Surat,Marketing Manager,137119.65
+26,FG00026,Vikram Patel,vikram.patel26@finguru.demo,9562837684,1992-07-14,Surat,Software Engineer,40024.28
+27,FG00027,Arjun Sharma,arjun.sharma27@finguru.demo,9464323393,1976-04-07,Pune,Consultant,87406.3
+28,FG00028,Sneha Mehta,sneha.mehta28@finguru.demo,9399085574,1999-04-28,Gandhinagar,Government Employee,90391.65
+29,FG00029,Riya Patel,riya.patel29@finguru.demo,9680451872,1970-02-25,Pune,Business Owner,32841.19
+30,FG00030,Kavya Desai,kavya.desai30@finguru.demo,9530613729,1973-03-13,Ahmedabad,Marketing Manager,99610.55
+31,FG00031,Akash Desai,akash.desai31@finguru.demo,9847959430,2001-03-07,Bengaluru,Doctor,69213.63
+32,FG00032,Vivaan Kumar,vivaan.kumar32@finguru.demo,9165452690,1990-01-02,Hyderabad,Government Employee,139039.26
+33,FG00033,Pooja Singh,pooja.singh33@finguru.demo,9645276696,1975-03-03,Hyderabad,Teacher,49402.07
+34,FG00034,Karan Joshi,karan.joshi34@finguru.demo,9711684318,1985-10-20,Ahmedabad,Student,43582.43
+35,FG00035,Aditya Joshi,aditya.joshi35@finguru.demo,9706907788,1990-05-07,Delhi,Doctor,126892.84
+36,FG00036,Akash Joshi,akash.joshi36@finguru.demo,9793101194,1989-08-11,Gandhinagar,Software Engineer,45286.13
+37,FG00037,Sneha Kumar,sneha.kumar37@finguru.demo,9207354053,1974-09-07,Vadodara,Accountant,179760.44
+38,FG00038,Rahul Gupta,rahul.gupta38@finguru.demo,9362298393,1993-05-06,Surat,Consultant,161533.95
+39,FG00039,Nikhil Kumar,nikhil.kumar39@finguru.demo,9966616964,1970-11-27,Vadodara,Accountant,177497.26
+40,FG00040,Arjun Mehta,arjun.mehta40@finguru.demo,9214929002,1979-05-10,Hyderabad,Doctor,65992.22
+41,FG00041,Ananya Shah,ananya.shah41@finguru.demo,9383450553,2002-08-09,Ahmedabad,Teacher,131562.05
+42,FG00042,Kavya Verma,kavya.verma42@finguru.demo,9458153605,1978-11-09,Mumbai,Government Employee,31833.45
+43,FG00043,Riya Joshi,riya.joshi43@finguru.demo,9220123666,1974-12-05,Vadodara,Software Engineer,111940.56
+44,FG00044,Priya Kumar,priya.kumar44@finguru.demo,9561479973,1978-01-10,Delhi,Software Engineer,110641.39
+45,FG00045,Priya Shah,priya.shah45@finguru.demo,9816114302,1976-06-25,Vadodara,Marketing Manager,130720.34
+46,FG00046,Diya Mehta,diya.mehta46@finguru.demo,9354194771,1980-03-14,Ahmedabad,Business Owner,168493.39
+47,FG00047,Ananya Joshi,ananya.joshi47@finguru.demo,9889262019,1985-05-06,Gandhinagar,Marketing Manager,149346.45
+48,FG00048,Vivaan Desai,vivaan.desai48@finguru.demo,9976803188,1999-06-10,Pune,Doctor,59477.23
+49,FG00049,Aarav Shah,aarav.shah49@finguru.demo,9399147754,1974-05-12,Vadodara,Marketing Manager,86762.23
+50,FG00050,Riya Gupta,riya.gupta50@finguru.demo,9223847257,1986-03-19,Bengaluru,Software Engineer,170581.76
+51,FG00051,Arjun Kumar,arjun.kumar51@finguru.demo,9882269302,1990-07-20,Vadodara,Teacher,92357.38
+52,FG00052,Isha Kumar,isha.kumar52@finguru.demo,9147659674,1997-01-17,Vadodara,Doctor,54462.21
+53,FG00053,Priya Joshi,priya.joshi53@finguru.demo,9813219781,1991-10-11,Gandhinagar,Accountant,35845.94
+54,FG00054,Pooja Verma,pooja.verma54@finguru.demo,9450236225,1995-12-10,Vadodara,Business Owner,128368.4
+55,FG00055,Vikram Joshi,vikram.joshi55@finguru.demo,9507104143,1981-10-19,Bengaluru,Marketing Manager,128064.06
+56,FG00056,Riya Sharma,riya.sharma56@finguru.demo,9325681936,1997-10-20,Delhi,Government Employee,72100.62
+57,FG00057,Sneha Desai,sneha.desai57@finguru.demo,9648868899,2000-12-06,Gandhinagar,Accountant,129722.22
+58,FG00058,Pooja Kumar,pooja.kumar58@finguru.demo,9978775497,1985-11-10,Pune,Doctor,76954.18
+59,FG00059,Rahul Sharma,rahul.sharma59@finguru.demo,9610173760,1974-08-14,Hyderabad,Doctor,32163.13
+60,FG00060,Isha Desai,isha.desai60@finguru.demo,9258453521,1970-02-25,Jaipur,Doctor,86946.19
+61,FG00061,Rohan Singh,rohan.singh61@finguru.demo,9698509918,1985-02-15,Mumbai,Government Employee,97005.23
+62,FG00062,Pooja Singh,pooja.singh62@finguru.demo,9910943524,1998-10-27,Vadodara,Marketing Manager,117295.11
+63,FG00063,Riya Desai,riya.desai63@finguru.demo,9898493949,2000-08-09,Pune,Accountant,164067.26
+64,FG00064,Pooja Desai,pooja.desai64@finguru.demo,9394846763,1998-02-23,Bengaluru,Doctor,122146.01
+65,FG00065,Akash Gupta,akash.gupta65@finguru.demo,9679984033,1975-03-05,Pune,Marketing Manager,74554.98
+66,FG00066,Rahul Shah,rahul.shah66@finguru.demo,9537656494,1991-09-15,Jaipur,Software Engineer,34955.47
+67,FG00067,Vikram Joshi,vikram.joshi67@finguru.demo,9926561919,1971-10-13,Surat,Software Engineer,85368.91
+68,FG00068,Priya Verma,priya.verma68@finguru.demo,9997356828,1996-09-24,Vadodara,Student,141788.64
+69,FG00069,Karan Desai,karan.desai69@finguru.demo,9567975319,2001-01-13,Delhi,Marketing Manager,59010.35
+70,FG00070,Rohan Desai,rohan.desai70@finguru.demo,9768143326,1971-07-19,Hyderabad,Software Engineer,167528.95
+71,FG00071,Aditya Joshi,aditya.joshi71@finguru.demo,9595744935,1981-01-09,Jaipur,Designer,46033.42
+72,FG00072,Vikram Desai,vikram.desai72@finguru.demo,9917364173,1994-05-25,Jaipur,Accountant,75661.1
+73,FG00073,Aditya Desai,aditya.desai73@finguru.demo,9679196799,1973-06-08,Gandhinagar,Software Engineer,28004.41
+74,FG00074,Aarav Shah,aarav.shah74@finguru.demo,9121882877,1979-04-05,Surat,Teacher,55900.91
+75,FG00075,Neha Shah,neha.shah75@finguru.demo,9375139575,1993-03-20,Hyderabad,Teacher,97080.27
+76,FG00076,Rohan Verma,rohan.verma76@finguru.demo,9127571992,1989-10-22,Jaipur,Marketing Manager,41755.31
+77,FG00077,Vikram Patel,vikram.patel77@finguru.demo,9991819497,1985-02-23,Bengaluru,Student,116775.17
+78,FG00078,Arjun Kumar,arjun.kumar78@finguru.demo,9472807202,1997-11-12,Gandhinagar,Consultant,146308.48
+79,FG00079,Ananya Sharma,ananya.sharma79@finguru.demo,9982971099,2001-02-14,Delhi,Government Employee,156684.22
+80,FG00080,Rahul Joshi,rahul.joshi80@finguru.demo,9660221300,1987-10-26,Vadodara,Government Employee,52301.23
+81,FG00081,Sneha Joshi,sneha.joshi81@finguru.demo,9736164778,1987-06-28,Pune,Teacher,152988.86
+82,FG00082,Akash Desai,akash.desai82@finguru.demo,9598976917,1994-06-01,Surat,Designer,62798.83
+83,FG00083,Rohan Desai,rohan.desai83@finguru.demo,9956665975,1986-06-09,Hyderabad,Accountant,57878.58
+84,FG00084,Riya Sharma,riya.sharma84@finguru.demo,9305145276,1975-04-24,Jaipur,Government Employee,105077.22
+85,FG00085,Riya Shah,riya.shah85@finguru.demo,9793532952,2001-08-26,Ahmedabad,Teacher,132044.45
+86,FG00086,Nikhil Shah,nikhil.shah86@finguru.demo,9361246928,1989-11-19,Delhi,Government Employee,87682.17
+87,FG00087,Riya Singh,riya.singh87@finguru.demo,9900942073,1991-06-23,Surat,Accountant,78282.4
+88,FG00088,Nikhil Verma,nikhil.verma88@finguru.demo,9874473159,1982-06-04,Vadodara,Business Owner,60733.4
+89,FG00089,Vikram Shah,vikram.shah89@finguru.demo,9396889215,1988-02-27,Pune,Accountant,139483.72
+90,FG00090,Karan Gupta,karan.gupta90@finguru.demo,9115191689,1978-05-02,Ahmedabad,Consultant,52813.44
+91,FG00091,Nikhil Mehta,nikhil.mehta91@finguru.demo,9908304440,2001-02-28,Ahmedabad,Student,123869.8
+92,FG00092,Nikhil Desai,nikhil.desai92@finguru.demo,9465830215,1981-01-09,Surat,Teacher,99200.7
+93,FG00093,Aditya Joshi,aditya.joshi93@finguru.demo,9719571745,1973-03-05,Hyderabad,Accountant,101220.72
+94,FG00094,Aditya Shah,aditya.shah94@finguru.demo,9920814900,1996-10-20,Hyderabad,Doctor,43359.99
+95,FG00095,Pooja Joshi,pooja.joshi95@finguru.demo,9575368059,1989-10-14,Bengaluru,Student,94829.74
+96,FG00096,Diya Sharma,diya.sharma96@finguru.demo,9894664845,1976-04-21,Pune,Accountant,119492.79
+97,FG00097,Aditya Mehta,aditya.mehta97@finguru.demo,9692697161,1974-03-01,Jaipur,Government Employee,62179.1
+98,FG00098,Diya Desai,diya.desai98@finguru.demo,9348545713,1988-12-10,Surat,Teacher,70145.19
+99,FG00099,Karan Verma,karan.verma99@finguru.demo,9771150922,1982-07-04,Vadodara,Doctor,147113.34
+100,FG00100,Rahul Verma,rahul.verma100@finguru.demo,9176675731,1973-03-26,Bengaluru,Student,153127.83
