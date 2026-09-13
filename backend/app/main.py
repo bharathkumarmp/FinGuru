@@ -6,6 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 # API ROUTERS
 # ============================================================
 
+from app.api.auth import router as auth_router
+
 from app.api.ai import router as ai_router
 from app.api.copilot import router as copilot_router
 from app.api.recommendations import router as recommendations_router
@@ -42,7 +44,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -89,6 +94,15 @@ def health_check():
 # ============================================================
 # REGISTER API ROUTERS
 # ============================================================
+
+
+# ------------------------------------------------------------
+# AUTHENTICATION
+# ------------------------------------------------------------
+
+app.include_router(
+    auth_router
+)
 
 
 # ------------------------------------------------------------
@@ -303,6 +317,7 @@ def startup_event():
     print("API LAYER")
     print("---------")
 
+    print("Authentication API    : ENABLED")
     print("AI Orchestrator       : ENABLED")
     print("Customer APIs         : ENABLED")
     print("Accounts API          : ENABLED")
@@ -314,7 +329,7 @@ def startup_event():
     print("Recommendation API    : ENABLED")
     print("Offers API            : ENABLED")
     print("Loan API              : ENABLED")
-    print("Copilot API           : ENABLED")
+    print("Copilot API            : ENABLED")
     print("Incident API          : ENABLED")
     print("Consent API           : ENABLED")
 

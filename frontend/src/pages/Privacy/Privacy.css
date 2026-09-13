@@ -1,0 +1,667 @@
+/* =========================================================
+   FINGURU PRIVACY / CONSENT
+========================================================= */
+
+.privacy-page {
+  min-height: 100vh;
+  padding: 28px 34px 50px;
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(129, 140, 248, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(45, 212, 191, 0.12),
+      transparent 28%
+    ),
+    #f7f9fc;
+  color: #172033;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.privacy-header {
+  margin-bottom: 22px;
+}
+
+.privacy-header-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.privacy-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.privacy-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #e0e7ff
+  );
+
+  color: #4f46e5;
+
+  box-shadow:
+    0 10px 25px rgba(79, 70, 229, 0.12);
+}
+
+.privacy-eyebrow,
+.section-eyebrow {
+  margin: 0 0 5px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+
+  color: #64748b;
+}
+
+.privacy-title-row h1 {
+  margin: 0;
+
+  font-size: 31px;
+  line-height: 1.15;
+
+  letter-spacing: -0.03em;
+}
+
+.privacy-subtitle {
+  margin: 7px 0 0;
+
+  color: #64748b;
+  font-size: 14px;
+}
+
+.refresh-button {
+  border: 0;
+  border-radius: 12px;
+
+  padding: 11px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: white;
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 20px rgba(15, 23, 42, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+.refresh-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.privacy-status-card {
+  max-width: 1250px;
+  margin: 0 auto 22px;
+
+  padding: 23px 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(239, 246, 255, 0.9)
+    );
+
+  box-shadow:
+    0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.status-icon {
+  width: 49px;
+  height: 49px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.status-content {
+  flex: 1;
+}
+
+.status-content h2 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+}
+
+.status-content p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.consent-counter {
+  min-width: 120px;
+
+  padding: 12px 16px;
+
+  text-align: center;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.consent-counter strong {
+  display: block;
+
+  font-size: 21px;
+  color: #4f46e5;
+}
+
+.consent-counter span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.privacy-alert {
+  max-width: 1250px;
+  margin: 0 auto 18px;
+
+  padding: 13px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 13px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.privacy-alert.error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.privacy-alert.success {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+/* =========================================================
+   CONSENT SECTION
+========================================================= */
+
+.consent-section {
+  max-width: 1250px;
+  margin: 0 auto 24px;
+}
+
+.section-heading {
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.section-heading p:last-child {
+  margin: 6px 0 0;
+
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================================
+   CONSENT GRID
+========================================================= */
+
+.consent-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.consent-card {
+  min-height: 235px;
+
+  padding: 19px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.045);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.consent-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 32px rgba(15, 23, 42, 0.08);
+}
+
+.consent-card.granted {
+  border-color: #c7d2fe;
+}
+
+.consent-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.consent-card-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.consent-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.consent-status.active {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.consent-status.inactive {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.consent-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 16px;
+}
+
+.consent-card > p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.65;
+
+  flex: 1;
+}
+
+.consent-card-footer {
+  padding-top: 16px;
+  margin-top: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #eef2f7;
+}
+
+.consent-card-footer > span {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.toggle {
+  position: relative;
+
+  width: 45px;
+  height: 25px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #cbd5e1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.toggle.on {
+  background: #4f46e5;
+}
+
+.toggle:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggle-knob {
+  position: absolute;
+
+  top: 3px;
+  left: 3px;
+
+  width: 19px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 2px 5px rgba(15, 23, 42, 0.18);
+
+  transition:
+    transform 0.2s ease;
+}
+
+.toggle.on .toggle-knob {
+  transform: translateX(20px);
+}
+
+/* =========================================================
+   RESPONSIBLE AI
+========================================================= */
+
+.privacy-principles {
+  max-width: 1250px;
+  margin: 0 auto 22px;
+
+  padding: 23px;
+
+  border-radius: 20px;
+
+  background: #111827;
+  color: white;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.principles-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 20px;
+}
+
+.principles-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: #c7d2fe;
+}
+
+.principles-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+.principles-header p {
+  margin: 4px 0 0;
+
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.principles-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.principles-grid > div {
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.principles-grid strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+}
+
+.principles-grid span {
+  display: block;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   ADVICE ACCESS
+========================================================= */
+
+.advice-access {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  padding: 16px 19px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  border-radius: 16px;
+}
+
+.advice-access.enabled {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.advice-access.blocked {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.advice-access strong {
+  display: block;
+  font-size: 13px;
+}
+
+.advice-access span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .consent-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .principles-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .privacy-page {
+    padding: 20px 15px 35px;
+  }
+
+  .privacy-header-content {
+    align-items: flex-start;
+  }
+
+  .privacy-title-row h1 {
+    font-size: 25px;
+  }
+
+  .privacy-header-content {
+    flex-direction: column;
+  }
+
+  .refresh-button {
+    align-self: flex-start;
+  }
+
+  .privacy-status-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .consent-counter {
+    width: 100%;
+  }
+
+  .consent-grid,
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

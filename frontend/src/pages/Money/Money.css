@@ -1,0 +1,449 @@
+.money-page {
+  min-height: 100vh;
+  background: #f7f9fd;
+  color: #111c42;
+}
+
+
+/* HEADER */
+
+.money-header {
+  min-height: 82px;
+
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+
+  border-bottom: 1px solid #e8ecf4;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: #50638a;
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.money-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.money-title-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eaf2ff;
+  color: #3973da;
+}
+
+.money-title h1 {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.money-title p {
+  margin: 3px 0 0;
+
+  color: #7c89a5;
+
+  font-size: 10px;
+}
+
+
+/* CONTAINER */
+
+.money-container {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 30px 35px;
+}
+
+
+/* BALANCE */
+
+.balance-card {
+  min-height: 175px;
+
+  padding: 30px 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      120deg,
+      #e9f1ff,
+      #e8f9f3
+    );
+
+  margin-bottom: 25px;
+}
+
+.balance-card span {
+  color: #61749a;
+
+  font-size: 11px;
+}
+
+.balance-card h2 {
+  margin: 8px 0;
+
+  font-size: 36px;
+
+  letter-spacing: -1px;
+}
+
+.balance-card p {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #159565;
+
+  font-size: 11px;
+}
+
+.balance-icon {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+
+  background: rgba(255,255,255,0.75);
+
+  color: #3973da;
+}
+
+
+/* SECTION */
+
+.section-heading {
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+
+  color: #7c89a5;
+
+  font-size: 10px;
+}
+
+
+/* ACCOUNTS */
+
+.account-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 17px;
+
+  margin-bottom: 25px;
+}
+
+.account-card {
+  padding: 22px;
+
+  border-radius: 16px;
+
+  background: white;
+
+  border: 1px solid #e6eaf2;
+
+  box-shadow:
+    0 5px 15px rgba(30, 55, 110, 0.04);
+}
+
+.account-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+}
+
+.account-icon.bank {
+  background: #eaf2ff;
+  color: #3973da;
+}
+
+.account-icon.card {
+  background: #fff0f3;
+  color: #df405d;
+}
+
+.account-icon.investment {
+  background: #eaf9f3;
+  color: #20a875;
+}
+
+.account-status {
+  padding: 5px 8px;
+
+  border-radius: 12px;
+
+  background: #effbf5;
+
+  color: #1b9a67;
+
+  font-size: 8px;
+}
+
+.account-card h3 {
+  margin: 17px 0 5px;
+
+  font-size: 13px;
+}
+
+.account-card p {
+  margin: 0 0 17px;
+
+  color: #8994aa;
+
+  font-size: 9px;
+}
+
+.account-card strong {
+  font-size: 21px;
+}
+
+
+/* MONEY STATS */
+
+.money-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 17px;
+
+  margin-bottom: 25px;
+}
+
+.money-panel {
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  background: white;
+
+  border: 1px solid #e6eaf2;
+
+  border-radius: 16px;
+}
+
+.panel-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+}
+
+.income-icon {
+  background: #eaf9f2;
+  color: #19a66d;
+}
+
+.expense-icon {
+  background: #fff1eb;
+  color: #ec713c;
+}
+
+.savings-icon {
+  background: #f0edff;
+  color: #7058d7;
+}
+
+.money-panel span {
+  color: #71809d;
+
+  font-size: 10px;
+}
+
+.money-panel h2 {
+  margin: 5px 0;
+
+  font-size: 21px;
+}
+
+.money-panel p {
+  margin: 0;
+
+  color: #8793aa;
+
+  font-size: 9px;
+}
+
+.money-panel p.green {
+  color: #18a36a;
+}
+
+
+/* AI INSIGHT */
+
+.money-insight {
+  padding: 23px 27px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #edf4ff,
+      #eefaf7
+    );
+
+  border: 1px solid #dce8fa;
+}
+
+.insight-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #3973da;
+
+  color: white;
+
+  font-size: 20px;
+}
+
+.money-insight span {
+  color: #3973da;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.money-insight h3 {
+  margin: 5px 0;
+
+  font-size: 15px;
+}
+
+.money-insight p {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #607294;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .account-grid,
+  .money-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .money-header {
+    padding: 0 20px;
+  }
+
+  .money-container {
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .money-title {
+    display: none;
+  }
+
+  .balance-card {
+    padding: 25px;
+  }
+
+  .balance-card h2 {
+    font-size: 29px;
+  }
+
+  .balance-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+}
