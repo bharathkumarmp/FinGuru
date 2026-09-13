@@ -28,3 +28,5 @@ vector_store/
 
 # Logs
 *.log   
+# Local Netlify folder
+.netlify

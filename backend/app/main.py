@@ -45,8 +45,12 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        # Local development
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+
+        # FinGuru production frontend
+        "https://finguru-finance-ai.netlify.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -329,7 +333,7 @@ def startup_event():
     print("Recommendation API    : ENABLED")
     print("Offers API            : ENABLED")
     print("Loan API              : ENABLED")
-    print("Copilot API            : ENABLED")
+    print("Copilot API           : ENABLED")
     print("Incident API          : ENABLED")
     print("Consent API           : ENABLED")
 
